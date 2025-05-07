@@ -5,7 +5,7 @@ const pool = mysql.createPool({
     database : "quotes_db",
     password : "manager",
     port: 3306,
-    user : "W1_89717_Tushar"
+    user : "root"
 })
 
 module.exports= pool

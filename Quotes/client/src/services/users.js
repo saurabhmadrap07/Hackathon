@@ -16,7 +16,7 @@ export async function usersSignIn(email,password) {
     return data
 }
 export async function userSignUp(email, password, firstName, lastName, mobile, addr) {
-	const url = `${baseUrl}/users/signup`;
+	const url = `${baseUrl}/users/register`;
 	const reqbody = { email, password, firstName, lastName, mobile, addr };
 	const resp = await axios.post(url, reqbody);
 	console.log(resp);

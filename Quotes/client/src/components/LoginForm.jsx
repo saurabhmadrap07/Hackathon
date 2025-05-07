@@ -1,14 +1,14 @@
-import React, { useContext, useState } from 'react';
+import  { useContext, useState } from 'react';
 import {Link, useNavigate} from "react-router";
 import {toast} from "react-toastify";
 import {usersSignIn} from "../services/users";
-// import {AuthContext} from "../App";
+import {AuthContext} from "../App";
 
 const LoginForm = () => {
 	const [email, setEmail] = useState("");
 	const [passwd, setPasswd] = useState("");
 	const navigate = useNavigate();
-	// const { setUser } = useContext(AuthContext);
+	const { setUser } = useContext(AuthContext);
 
 	const handleEmailChange = (e) => {
 		setEmail(e.target.value);

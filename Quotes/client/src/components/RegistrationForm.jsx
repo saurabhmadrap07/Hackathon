@@ -15,7 +15,7 @@ const RegistrationForm = () => {
 
 	const navigate = useNavigate();
 	const handleInputFieldChange = (e) =>
-		setInfo({ ...info, [e.target.firstName]: e.target.value });
+		setInfo({ ...info, [e.target.name]: e.target.value });
 
 	const handleSignUpClick = async (e) => {
 		try{ 
@@ -62,7 +62,7 @@ const RegistrationForm = () => {
 				<label className="form-label">FirstName:</label>
 				<input
 					className="form-control"
-					name="name"
+					name="firstName"
 					type="text"
 					onChange={handleInputFieldChange}
 				/>
@@ -71,7 +71,7 @@ const RegistrationForm = () => {
 				<label className="form-label">LastName:</label>
 				<input
 					className="form-control"
-					name="name"
+					name="lastName"
 					type="text"
 					onChange={handleInputFieldChange}
 				/>

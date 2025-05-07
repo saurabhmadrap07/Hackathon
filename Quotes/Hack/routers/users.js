@@ -8,11 +8,11 @@ const bcrypt = require("bcrypt")
 const {createToken} = require("../utils/jwtauth")
 
 router.post("/register" , (req,res) =>{
-    const {firstname,lastname ,email,password,phoneno,address} = req.body
+    const {firstName,lastName ,email,password,phoneno,address} = req.body
     //const encPassword = bcrypt.hashSync(password,10)
 
     db.query("insert into user(firstName,lastName,email,password,phoneno,address) values(?,?,?,?,?,?)" ,
-        [firstname,lastname,email,password,phoneno,address],
+        [firstName,lastName,email,password,phoneno,address],
         (err,result) =>{
             if(err)
                 return res.send(apiError(err))

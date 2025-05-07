@@ -3,12 +3,15 @@ const app = express()
 
 const {jwtAuth} = require("./utils/jwtauth")
 const userRouter = require("./routers/users")
-//const movieRouter = require("./routers/movies")
+const quoteRouter = require("./routers/quotes")
 //const reviewRouter = require("./routers/reviews")
+
+const cors = require("cors");
+app.use(cors());
 
 app.use(express.json())
 app.use(jwtAuth)
-//app.use("/movies",movieRouter)
+app.use("/quotes",quoteRouter)
 app.use("/users",userRouter)
 //app.use("/reviews",reviewRouter)
 
